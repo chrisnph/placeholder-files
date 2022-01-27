@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "0f2643c9-02f1-4e0f-823e-dcf677fe4202",
+		"name": "Movie",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Movies",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"order_by\": \"newest\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/movies",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"The Matrix Resurrections\",\r\n    \"genres\": [\"sci-fi\"],\r\n    \"duration\": 148,\r\n    \"views\": 33,\r\n    \"image\": \"https://w0.peakpx.com/wallpaper/472/240/HD-wallpaper-carrie-anne-moss-keanu-reeves-morpheus-neo-trinity-yahya-abdul-mateen-ii-the-matrix-resurrections.jpg\",\r\n    \"release\": \"12/02/2021\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/movies/add",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"movies",
+						"add"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "9c8fb51e-e99c-43a4-8a22-958ae6118a6d",
+		"name": "Schedule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Schedules",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/schedules",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"schedules"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Schedule",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"movie_id\": 1,\r\n    \"theatre_id\": 1,\r\n    \"time_start\": \"01/11/2022 07:00 pm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/schedules/add",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"schedules",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Theatre",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"theatre_name\": \"gsc\",\r\n    \"time_start\": \"01/11/2022\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/schedules/search",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"schedules",
+						"search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Timeslot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"theatre_name\": \"gsc\",\r\n    \"time_start\": \"01/11/2022 1:00 pm\",\r\n    \"time_end\": \"01/11/2022 11:00 pm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/schedules/search/timeslot",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"schedules",
+						"search",
+						"timeslot"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
